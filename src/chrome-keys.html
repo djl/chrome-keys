@@ -1,0 +1,20 @@
+<html>
+<script type="text/javascript">
+chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse) {
+        chrome.bookmarks.getTree(function(root) {
+            id = request.id - 1;
+            if (root[0] && root[0].children[0] && root[0].children[0].children[id]) {
+                chrome.tabs.getSelected(null, function(tab) {
+                    url = root[0].children[0].children[id].url;
+                    if (url.indexOf("javascript:") == 0) {
+                        chrome.tabs.executeScript(tab.id, { "code": unescape(url) });
+                    } else {
+                        chrome.tabs.update(tab.id, { "url": url });
+                    }
+                });
+            }
+        });
+    });
+</script>
+</html>
