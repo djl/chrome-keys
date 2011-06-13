@@ -1,6 +1,6 @@
 {
   "name": "Chrome Keys",
-  "version": "0.1",
+  "version": "1.0",
   "description": "Safari-style access to your bookmarks bar.",
   "background_page": "chrome-keys.html",
   "content_scripts": [{
