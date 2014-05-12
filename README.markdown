@@ -1,8 +1,4 @@
 Chrome Keys
 -----------
 
-Chrome Keys is pretty much the defunct "Chromac" Chrome extension.
-
-There have been a few tweaks, mostly to work around changes in the
-latest Chromium builds. Otherwise it remains the same.
-
+Safari-style access to your bookmarks bar using command/control 1-9.

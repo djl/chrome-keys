@@ -1,12 +1,57 @@
 {
   "name": "Chrome Keys",
-  "version": "1.0",
   "description": "Safari-style access to your bookmarks bar.",
-  "background_page": "chrome-keys.html",
-  "content_scripts": [{
-     "all_frames": true,
-     "js": [ "chrome-keys.js" ],
-      "matches": [ "http://*/*", "https://*/*" ]
-  }],
-  "permissions": [ "bookmarks", "tabs", "http://*/", "https://*/" ]
+  "version": "2.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "bookmarks",
+    "http://*/*",
+    "https://*/*",
+    "tabs"
+  ],
+  "commands": {
+    "chrome-keys-1": {
+      "description": "Load the 1st bookmark",
+      "suggested_key": {
+        "default": "Ctrl+1"
+      }
+    },
+    "chrome-keys-2": {
+      "description": "Load the 2nd bookmark",
+      "suggested_key": {
+        "default": "Ctrl+2"
+      }
+    },
+    "chrome-keys-3": {
+      "description": "Load the 3rd bookmark",
+      "suggested_key": {
+        "default": "Ctrl+3"
+      }
+    },
+    "chrome-keys-4": {
+      "description": "Load the 4rd bookmark",
+      "suggested_key": {
+        "default": "Ctrl+4"
+      }
+    },
+    "chrome-keys-5": {
+      "description": "Load the 5th bookmark"
+    },
+    "chrome-keys-6": {
+      "description": "Load the 6th bookmark"
+    },
+    "chrome-keys-7": {
+      "description": "Load the 7th bookmark"
+    },
+    "chrome-keys-8": {
+      "description": "Load the 8th bookmark"
+    },
+    "chrome-keys-9": {
+      "description": "Load the 9th bookmark"
+    }
+  }
 }
